@@ -14,3 +14,56 @@ A team ONLY wins if it has at least DOUBLE the average score of the other team. 
 
 TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+
+*/
+const calcAverage = (a,b,c) => (a + b + c)/3;
+
+const checkWinner = (avgDolphins,avgKoalas) => {
+    avgDolphins >= 2 * avgKoalas ? console.log(`Dolphins win 🏆 ${avgDolphins} vs ${avgKoalas}`) 
+    :avgKoalas >= 2 * avgDolphins ? console.log(`Koalas win 🏆 ${avgKoalas} vs ${avgDolphins}`)
+    :console.log("No team wins!");
+}
+
+//Test Data 1
+let scoreDolphins = calcAverage(44,23,71)
+let scoreKoalas = calcAverage(65,54,49);
+checkWinner(scoreDolphins,scoreKoalas);
+
+//Test Data 2
+scoreDolphins = calcAverage(85,54,41);
+scoreKoalas = calcAverage(23,34,27);
+checkWinner(scoreDolphins,scoreKoalas);
+/*Could be declared as different variables as well
+const scoreDolphins2 = calcAverage(85,54,41);
+const scoreKoalas2 = calcAverage(23,34,27);
+checkWinner(scoreDolphins2,scoreKoalas2);
+
+
+
+/*****Method 2
+
+// Test 1
+const calcAverage = (a,b,c) => (a + b + c) / 3;
+
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log('No team wins...');
+  }
+}
+checkWinner(scoreDolphins, scoreKoalas);
+
+// Test 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+checkWinner(scoreDolphins, scoreKoalas); ******/
+
+
+
