@@ -81,13 +81,8 @@ Use the function type you like the most. Test the function using a bill value of
 
 TEST DATA: 125, 555 and 44 */
 
-const calcTip = (billVal) => {
-  if (billVal >= 50 && billVal <= 300) {
-      return billVal * 0.15;
-  } return billVal * 0.2;
-}
-
-calcTip(100);
+const calcTip = billVal => billVal >= 50 && billVal <= 300 ? billVal * 0.15 : billVal * 0.2;
+console.log(calcTip(100));
 
 const bills = [125,555,44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
