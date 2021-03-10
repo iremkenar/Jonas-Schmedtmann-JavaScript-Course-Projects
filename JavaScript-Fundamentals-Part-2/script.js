@@ -81,6 +81,8 @@ Use the function type you like the most. Test the function using a bill value of
 
 TEST DATA: 125, 555 and 44 */
 
+/*****
+ 
 const calcTip = billVal => billVal >= 50 && billVal <= 300 ? billVal * 0.15 : billVal * 0.2;
 console.log(calcTip(100));
 
@@ -89,3 +91,55 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(tips);
 console.log(total);
+
+********/
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, 
+let's use objects to implement the calculations! 
+Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass, and height 
+(Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). 
+Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. 
+Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+*/
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function() {
+  this.bmiVal = this.mass / this.height ** 2;
+  return this.bmiVal;
+  }
+}
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function() {
+  this.bmiVal = this.mass / this.height ** 2;
+  return this.bmiVal;
+  }
+}
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmiVal);
+console.log(john.bmiVal);
+
+mark.bmiVal > john.bmiVal ? 
+console.log(`${mark.fullName}'s BMI (${mark.bmiVal}) is higher than (${john.fullName})'s (${john.bmiVal})`)
+:console.log(`${john.fullName}'s BMI (${john.bmiVal}) is higher than (${mark.fullName})'s (${mark.bmiVal})`);
+
+
