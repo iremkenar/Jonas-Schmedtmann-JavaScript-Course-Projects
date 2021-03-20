@@ -43,3 +43,7 @@ let description =
   ' million people speak ' +
   language;
 console.log(description);
+
+// 5. Strings and Template Literals
+description = `${country} is in ${continent}, and its ${gerPopulation} million people speak ${language}`;
+console.log(description);
