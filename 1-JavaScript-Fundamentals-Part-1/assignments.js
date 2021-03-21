@@ -85,3 +85,28 @@ if (language === 'English' && gerPopulation < 50 && !isIsland) {
 } else {
   console.log('Germany does not meet you criteria');
 }
+
+// 10. The switch statement
+
+const newLanguage = 'spanish';
+
+switch (newLanguage) {
+  case 'chinese':
+  case 'mandarin':
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'english':
+    console.log('3rd place');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;
+  case 'arabic':
+    console.log('5th most spoken language');
+    break;
+  default:
+    console.log('Great language too! :)');
+}
