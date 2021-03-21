@@ -79,7 +79,7 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
 // 9. Logical Operators
 
 language = 'English';
-gerPopulation = 44;
+gerPopulation = 43;
 if (language === 'English' && gerPopulation < 50 && !isIsland) {
   console.log('You should live in Germany');
 } else {
@@ -110,3 +110,11 @@ switch (newLanguage) {
   default:
     console.log('Great language too! :)');
 }
+
+// 11. The conditional (ternary operator)
+
+console.log(
+  `${country}'s population is ${
+    gerPopulation > averagePopulation ? 'above' : 'below'
+  } the average`
+);
