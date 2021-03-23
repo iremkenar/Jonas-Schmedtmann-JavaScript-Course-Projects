@@ -121,9 +121,9 @@
 //   } the average`
 // );
 
-// // Part 2
+//****************************Part 2***************************************/
 
-// // 1. Functions
+// 1. Functions
 
 function describeCountry(country, population, capitalCity) {
   return `${country} has ${population} million people and its capital city is ${capitalCity}`;
@@ -134,3 +134,32 @@ const narnia = describeCountry('Narnia', 11, 'Aslan');
 const norway = describeCountry('Norway', 6, 'Oslo');
 
 console.log(germany, narnia, norway);
+
+// 2. Function Declarations and Expressions
+//function declaration
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+//function expression
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
+};
+
+const germanyPercentage = percentageOfWorld1(83);
+const narniaPercentage = percentageOfWorld1(11);
+const norwayPercentage = percentageOfWorld1(6);
+console.log(germanyPercentage, narniaPercentage, norwayPercentage);
+
+const germanyPercentage2 = percentageOfWorld2(83);
+const narniaPercentage2 = percentageOfWorld2(11);
+const norwayPercentage2 = percentageOfWorld2(6);
+console.log(germanyPercentage2, narniaPercentage2, norwayPercentage2);
+
+// 3. Arrow function
+
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+const germanyPercentage3 = percentageOfWorld3(83);
+const narniaPercentage3 = percentageOfWorld3(11);
+const norwayPercentage3 = percentageOfWorld3(6);
+console.log(germanyPercentage3, narniaPercentage3, norwayPercentage3);
