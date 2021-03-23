@@ -163,3 +163,44 @@ const germanyPercentage3 = percentageOfWorld3(83);
 const narniaPercentage3 = percentageOfWorld3(11);
 const norwayPercentage3 = percentageOfWorld3(6);
 console.log(germanyPercentage3, narniaPercentage3, norwayPercentage3);
+
+// 4. Functions calling other functions
+
+const describePopulation = (country, population) =>
+  console.log(
+    `${country} has ${population} million people, which is about ${percentageOfWorld1(
+      population
+    )}% of the world`
+  );
+//Method 2
+// const describePopulation = (country, population) => {
+//   const percentage = percentageOfWorld1(population);
+//   const description = `${country} has ${population} million people, which is about ${percentage}% of the world`;
+//   console.log(description);
+// };
+
+const descGermany = describePopulation('Germany', 83);
+
+// 5. Introduction to arrays
+const populations = [83, 11, 6, 1441];
+console.log(populations.length === 4);
+const percentages = new Array(
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3])
+);
+console.log(percentages);
+
+// 6. Basic Array Methods
+const neighbours = ['Mordor', 'Narnia', 'Atlantis'];
+neighbours.push('Utopia');
+console.log(neighbours);
+const popped = neighbours.pop();
+console.log(popped);
+console.log(neighbours);
+if (!neighbours.includes('Germany')) {
+  console.log('Probably not a central European country');
+}
+neighbours[neighbours.indexOf('Narnia')] = 'Republic of Narnia';
+console.log(neighbours);
