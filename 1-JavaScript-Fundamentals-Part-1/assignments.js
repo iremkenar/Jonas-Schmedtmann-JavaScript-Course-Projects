@@ -1,4 +1,6 @@
-//Assignments from Jonas Schmedtmanns course
+//Assignments from Jonas Schmedtmann's course
+
+// Part 1
 
 // 1. Values and Variables
 /*let country = 'Germany';
