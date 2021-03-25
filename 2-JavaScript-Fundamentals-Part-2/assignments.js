@@ -240,3 +240,42 @@ const myCountry = {
 myCountry.describe();
 myCountry.checkIsland();
 console.log(myCountry);
+
+// 10. The for loop
+// for (let i = 0; i <= 50; i++) {
+//   console.log(`Voter number ${i} is currently voting`);
+// }
+
+// 11. Looping arrays, breaking and continuing
+// const populations = [83, 11, 6, 1441];
+const percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages2.push(perc);
+  if (percentages[i] === percentages2[i]) continue;
+}
+console.log(percentages2);
+
+// 12. Looping Backwards and Loops in Loops
+
+const listOfNeighbours = [
+  ['Canada', 'Mexico'],
+  ['Spain'],
+  ['Norway', 'Sweden', 'Russia'],
+];
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let m = 0; m < listOfNeighbours[i].length; m++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][m]}`);
+  }
+}
+
+// 13. While loop
+// const populations = [83, 11, 6, 1441];
+const percentages3 = [];
+let i = 0;
+while (i < populations.length) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages3.push(perc);
+  i++;
+}
+console.log(percentages3);
