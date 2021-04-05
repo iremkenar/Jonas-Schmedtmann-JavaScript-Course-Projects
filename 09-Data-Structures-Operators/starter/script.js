@@ -160,44 +160,44 @@ Let's continue with our football betting app! This time, we have a map with a lo
 GOOD LUCK 😀
 */
 
-const gameEvents = new Map([
-  [17, '⚽️ GOAL'],
-  [36, '🔁 Substitution'],
-  [47, '⚽️ GOAL'],
-  [61, '🔁 Substitution'],
-  [64, '🔶 Yellow card'],
-  [69, '🔴 Red card'],
-  [70, '🔁 Substitution'],
-  [72, '🔁 Substitution'],
-  [76, '⚽️ GOAL'],
-  [80, '⚽️ GOAL'],
-  [92, '🔶 Yellow card'],
-]);
+// Coding Challenge #4
 
-// 1.
-const events = [...new Set([...gameEvents.values()])];
-console.log(events);
+/* 
+Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
 
-//2.
-gameEvents.delete(64);
-console.log(gameEvents);
+The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
 
-//3.
-//Method 1
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} minutes`
-);
+THIS TEST DATA (pasted to textarea)
+underscore_case
+ first_name
+Some_Variable 
+  calculate_AGE
+delayed_departure
 
-//Method 2
-const time = [...gameEvents.keys()].pop();
-console.log(time);
-console.log(
-  `An event happened, on average, every ${time / gameEvents.size} minutes`
-);
+SHOULD PRODUCE THIS OUTPUT (5 separate console.log outputs)
+underscoreCase      ✅
+firstName           ✅✅
+someVariable        ✅✅✅
+calculateAge        ✅✅✅✅
+delayedDeparture    ✅✅✅✅✅ 
+*/
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
 
-//4.
-for (const [min, event] of gameEvents.entries()) {
-  console.log(
-    `${min <= 45 ? '[FIRST HALF]' : '[SECOND HALF]'} ${min} : ${event}`
-  );
-}
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    let output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    //Method 1
+    output = output.padEnd(20);
+    console.log(output.padEnd(output.length + i + 1, '✅'));
+    //Method 2
+    // console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+  }
+});
