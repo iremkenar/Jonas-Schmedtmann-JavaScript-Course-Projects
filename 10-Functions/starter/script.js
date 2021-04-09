@@ -28,42 +28,56 @@ Here are your tasks:
 // BONUS TEST DATA 1: [5, 2, 3]
 // BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 
-const poll = {
-  question: 'What is your favourite programming language?',
-  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
-  answers: [0, 0, 0, 0],
-  registerNewAnswer() {
-    //Get answer
-    const answer = Number(
-      prompt(
-        `${this.question}\n${this.options.join(
-          '\n'
-        )}\n(Write option number below)`
-      )
-    );
-    console.log(answer);
+// const poll = {
+//   question: 'What is your favourite programming language?',
+//   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+//   answers: [0, 0, 0, 0],
+//   registerNewAnswer() {
+//     //Get answer
+//     const answer = Number(
+//       prompt(
+//         `${this.question}\n${this.options.join(
+//           '\n'
+//         )}\n(Write option number below)`
+//       )
+//     );
+//     console.log(answer);
 
-    //Register answer
-    typeof answer === 'number' && !!answer && answer < this.answers.length
-      ? this.answers[answer]++
-      : alert('Try again');
-    this.displayResults();
-    this.displayResults('string');
-  },
+//     //Register answer
+//     typeof answer === 'number' && !!answer && answer < this.answers.length
+//       ? this.answers[answer]++
+//       : alert('Try again');
+//     this.displayResults();
+//     this.displayResults('string');
+//   },
 
-  displayResults(type = 'array') {
-    if (type === 'array') {
-      console.log(this.answers);
-    } else if (type === 'string') {
-      console.log(`Poll results are ${this.answers.join(', ')}`);
-    }
-  },
-};
+//   displayResults(type = 'array') {
+//     if (type === 'array') {
+//       console.log(this.answers);
+//     } else if (type === 'string') {
+//       console.log(`Poll results are ${this.answers.join(', ')}`);
+//     }
+//   },
+// };
 
-document
-  .querySelector('.poll')
-  .addEventListener('click', poll.registerNewAnswer.bind(poll));
+// document
+//   .querySelector('.poll')
+//   .addEventListener('click', poll.registerNewAnswer.bind(poll));
 
-poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
-poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
-poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
+// poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
+// poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
+// poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
+
+// Coding Challenge 2
+// Explain why this function works?
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
+//
+/* Here the closure is necessary because by the time the callback function (event handler) is executed, the execution context of the IIFE would have been gone already. The callback function is attached to the body element, and it's waiting for some events to happen there. When the event happens, it will be executed, even though the environment in which it was created is already gone.
+However, here it is still able to access the variables that were created in that variable environment by the time the function was born. So the IIFE is the birthplace of the event handler function, therefore the function remembers all the variables present at a time of it's birth, and it is able to use them all */
