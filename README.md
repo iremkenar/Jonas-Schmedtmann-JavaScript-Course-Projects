@@ -16,16 +16,18 @@ However, players must be careful as a roll of 1 will result in the loss of their
 Players must weigh the risk of rolling again against the potential reward of holding onto their current score and passing the turn to their opponent.
 
 ## Bankist App 
-[Try Here!](iremkenar.github.io/bankistApp/)
+
 A minimalist online bank application allowing users to:
 
-Log in to see and sort their transactions,
-Transfer money to another account,
-Request a loan from the bank
-Delete their account
+- Log in to see and sort their transactions,
+- Transfer money to another account,
+- Request a loan from the bank
+- Delete their account
+
+[Try Here!](iremkenar.github.io/bankistApp/)
 Here are the login credentials for the users:
 
-js-1111
-jd-2222
-stw-333
-ss-4444
+* js-1111
+* jd-2222
+* stw-333
+* ss-4444
