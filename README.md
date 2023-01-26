@@ -26,7 +26,7 @@ A minimalist online bank application allowing users to:
 - Request a loan from the bank
 - Delete their account
 
-[Try Here!](iremkenar.github.io/bankistApp/)
+[Try Here!](https://iremkenar.github.io/bankistApp/)
 
 Here are the login credentials for the users:
 
