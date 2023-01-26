@@ -4,12 +4,14 @@
 
 ## Guess My Number
 [Play Here!](https://43lby4.csb.app/)
+
 Guess My Number is a retro-style game that challenges players to guess a secret number between 1 and 20. 
 The game offers helpful hints with each guess to guide players closer to the correct answer. 
 Players can track their progress with the highscore and aim to beat their personal best time with each round.
 
 ## Pig Game
 [Play here!](https://j4pu8n.csb.app/) 
+
 Pig Game is a two-player game where players take turns rolling a dice. 
 The goal is to be the first player to reach 100 points by accumulating the sum of each dice roll. 
 However, players must be careful as a roll of 1 will result in the loss of their entire accumulated score. 
@@ -25,6 +27,7 @@ A minimalist online bank application allowing users to:
 - Delete their account
 
 [Try Here!](iremkenar.github.io/bankistApp/)
+
 Here are the login credentials for the users:
 
 * js-1111
