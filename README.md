@@ -1,4 +1,4 @@
-# Jonas-Schmedtmann JavaScript Course Projects
+# Jonas Schmedtmann JavaScript Course Projects
 11 directories with 8 coding challenges and 2 games and a banking app project from Jonas Schmedtmann's 
 "The Complete JavaScript Course 2023: From Zero to Expert!" course
 
